@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="width: 200px;height:200px;background-color: white;border: 1px solid black;"id="key"></div>
+    <div id="container"></div>
+
+    <script>
+        const keydiv = document.getElementById("key");
+        function addcolor(color) {
+                newelemnt = document.createElement('div');
+                newelemnt.style.backgroundColor = color;
+                newelemnt.style.width = '200px';
+                newelemnt.style.height = '200px';
+                newelemnt.style.border = '1px solid black';
+                document.body.appendChild(newelemnt);
+    }
+        document.addEventListener('keydown', function (event) {
+            if (event.key === 'a') {
+                keydiv.style.backgroundColor = 'pink'
+        /* Cambiar a color 1 */
+            } else if (event.key === 's') {
+                keydiv.style.backgroundColor = 'orange'
+        /* Cambiar a color 2 */
+            } else if (event.key === 'd') {
+                keydiv.style.backgroundColor = 'lightblue'
+            } else if (event.key === 'q') {
+                color='purple'
+                addcolor(color);
+            } else if (event.key ==='w') {
+                color='grey'
+                addcolor(color);
+            } else if (event.key ==='e') {
+                color= 'brown'
+                addcolor(color);
+            }
+        })
+    </script>
+</body>
+</html>
